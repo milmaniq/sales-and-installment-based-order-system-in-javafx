@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="700.0" prefWidth="1360.0" styleClass="mainFxmlClass" stylesheets="@style/orders.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.rj.controller.OrderReportController">
+   <children>
+      <Label fx:id="lblOrderNewOrder" layoutY="100.0" onMouseClicked="#label_OnMouseClicked" prefHeight="50.0" prefWidth="178.0" styleClass="left_label" stylesheets="@style/orders.css" text="New Order">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon iconName="FILE_TEXT" strokeWidth="10.0" wrappingWidth="25.0" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblOrderBalancePayments" layoutY="150.0" onMouseClicked="#label_OnMouseClicked" prefHeight="50.0" prefWidth="187.0" styleClass="left_label" stylesheets="@style/orders.css" text="Balance Payments">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon iconName="PAYPAL" strokeWidth="10.0" wrappingWidth="25.0" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblOrderManageOrders" layoutY="200.0" onMouseClicked="#label_OnMouseClicked" prefHeight="50.0" prefWidth="178.0" styleClass="left_label" stylesheets="@style/orders.css" text="Manage Orders">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon iconName="PASTE" strokeWidth="10.0" wrappingWidth="25.0" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblHome" onMouseClicked="#label_OnMouseClicked" prefHeight="50.0" prefWidth="187.0" styleClass="left_label" stylesheets="@style/orders.css" text="Home">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon iconName="HOME" strokeWidth="10.0" wrappingWidth="25.0" />
+         </graphic>
+      </Label>
+      <Separator layoutX="247.0" orientation="VERTICAL" prefHeight="700.0" prefWidth="2.0" />
+      <Label layoutX="306.0" layoutY="50.0" text="Reports">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="-3.0" layoutY="50.0" prefHeight="50.0" prefWidth="187.0" styleClass="title_left_label" stylesheets="@style/orders.css" text="Orders">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderReports" layoutX="-2.0" layoutY="250.0" onMouseClicked="#label_OnMouseClicked" prefHeight="50.0" prefWidth="178.0" styleClass="active_left_label" stylesheets="@style/orders.css" text="Reports">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon iconName="COPY" strokeWidth="10.0" styleClass="active_left_label" wrappingWidth="25.0" />
+         </graphic>
+      </Label>
+      <JFXComboBox fx:id="cmbMonth" layoutX="560.0" layoutY="105.0" prefHeight="31.0" prefWidth="200.0" promptText="Month" styleClass="combobox" stylesheets="@style/orders.css" />
+      <Label layoutX="306.0" layoutY="95.0" prefHeight="50.0" prefWidth="187.0" styleClass="title_left_label" stylesheets="@style/orders.css" text="Get Report for the Month of:">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

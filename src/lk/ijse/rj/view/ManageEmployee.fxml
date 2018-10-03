@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="700.0" prefWidth="1360.0" styleClass="mainFxmlClass" stylesheets="@style/orders.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.rj.controller.ManageEmployeeController">
+   <children>
+      <Label fx:id="lblEmployeesManageEmployees" layoutY="100.0" onMouseClicked="#label_OnMouseClicked" prefHeight="50.0" prefWidth="178.0" styleClass="active_left_label" stylesheets="@style/orders.css" text="Manage Employees">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon iconName="FILE_TEXT" strokeWidth="10.0" styleClass="active_left_label" wrappingWidth="25.0" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblHome" onMouseClicked="#label_OnMouseClicked" prefHeight="50.0" prefWidth="187.0" styleClass="left_label" stylesheets="@style/orders.css" text="Home">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon iconName="HOME" strokeWidth="10.0" wrappingWidth="25.0" />
+         </graphic>
+      </Label>
+      <Separator layoutX="247.0" orientation="VERTICAL" prefHeight="700.0" prefWidth="2.0" />
+      <JFXTextField fx:id="txtEmployeeId" layoutX="428.0" layoutY="106.0" promptText="Employee ID" styleClass="textbox" stylesheets="@style/orders.css">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtName" layoutX="678.0" layoutY="106.0" prefHeight="31.0" promptText="Name" styleClass="textbox" stylesheets="@style/orders.css">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContact" layoutX="926.0" layoutY="106.0" promptText="Contact" styleClass="textbox" stylesheets="@style/orders.css">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" layoutX="428.0" layoutY="161.0" prefHeight="31.0" prefWidth="699.0" promptText="Address" styleClass="textbox_2" stylesheets="@style/orders.css">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="306.0" layoutY="50.0" text="Add/Edit Employee">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="-3.0" layoutY="50.0" prefHeight="50.0" prefWidth="187.0" styleClass="title_left_label" stylesheets="@style/orders.css" text="Employees">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnSave" defaultButton="true" layoutX="600.0" layoutY="224.0" onAction="#btnSave_OnAction" prefHeight="31.0" prefWidth="84.0" styleClass="button_1" stylesheets="@style/orders.css" text="Save" />
+      <JFXButton fx:id="btnDelete" defaultButton="true" layoutX="738.0" layoutY="224.0" onAction="#btnDelete_OnAction" prefHeight="31.0" prefWidth="84.0" styleClass="button_1" stylesheets="@style/orders.css" text="Delete" />
+      <JFXButton fx:id="btnClear" defaultButton="true" layoutX="878.0" layoutY="224.0" onAction="#btnClear_OnAction" prefHeight="31.0" prefWidth="302.0" styleClass="button_1" stylesheets="@style/orders.css" text="Clear" />
+      <TableView fx:id="tblEmployees" layoutX="308.0" layoutY="282.0" prefHeight="380.0" prefWidth="938.0" styleClass="table" stylesheets="@style/orders.css">
+         <columns>
+            <TableColumn prefWidth="218.0" styleClass="table_column_center" text="Employee ID" />
+            <TableColumn prefWidth="244.0" text="Name" />
+            <TableColumn prefWidth="199.0" styleClass="table_column_right" text="Contact" />
+            <TableColumn prefWidth="276.0" styleClass="table_column_right" text="Address" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

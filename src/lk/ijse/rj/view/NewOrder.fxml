@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="700.0" prefWidth="1360.0" styleClass="mainFxmlClass" stylesheets="@style/orders.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.rj.controller.NewOrderController">
+   <children>
+      <Label fx:id="lblOrderNewOrder" layoutY="100.0" onMouseClicked="#label_OnMouseClicked" prefHeight="50.0" prefWidth="178.0" styleClass="active_left_label" stylesheets="@style/orders.css" text="New Order">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon iconName="FILE_TEXT" strokeWidth="10.0" styleClass="active_left_label" wrappingWidth="25.0" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblOrderBalancePayments" layoutY="150.0" onMouseClicked="#label_OnMouseClicked" prefHeight="50.0" prefWidth="187.0" styleClass="left_label" stylesheets="@style/orders.css" text="Balance Payments">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon iconName="PAYPAL" strokeWidth="10.0" wrappingWidth="25.0" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblOrderManageOrders" layoutY="200.0" onMouseClicked="#label_OnMouseClicked" prefHeight="50.0" prefWidth="178.0" styleClass="left_label" stylesheets="@style/orders.css" text="Manage Orders">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon iconName="PASTE" strokeWidth="10.0" wrappingWidth="25.0" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblHome" onMouseClicked="#label_OnMouseClicked" prefHeight="50.0" prefWidth="187.0" styleClass="left_label" stylesheets="@style/orders.css" text="Home">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon iconName="HOME" strokeWidth="10.0" wrappingWidth="25.0" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblOrderReports" layoutX="-2.0" layoutY="250.0" onMouseClicked="#label_OnMouseClicked" prefHeight="50.0" prefWidth="178.0" styleClass="left_label" stylesheets="@style/orders.css" text="Reports">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon iconName="COPY" strokeWidth="10.0" wrappingWidth="25.0" />
+         </graphic>
+      </Label>
+      <Separator layoutX="247.0" orientation="VERTICAL" prefHeight="700.0" prefWidth="2.0" />
+      <JFXTextField fx:id="txtOrderId" layoutX="308.0" layoutY="104.0" promptText="Order ID" styleClass="textbox" stylesheets="@style/orders.css">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmbEmployeeId" layoutX="556.0" layoutY="104.0" prefHeight="31.0" prefWidth="200.0" promptText="Employee ID" styleClass="combobox" stylesheets="@style/orders.css" />
+      <JFXTextField fx:id="txtName" layoutX="307.0" layoutY="158.0" prefHeight="31.0" promptText="Name" styleClass="textbox" stylesheets="@style/orders.css">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" layoutX="556.0" layoutY="158.0" prefHeight="31.0" prefWidth="500.0" promptText="Address" styleClass="textbox_2" stylesheets="@style/orders.css">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContact" layoutX="306.0" layoutY="212.0" promptText="Contact" styleClass="textbox" stylesheets="@style/orders.css">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXDatePicker fx:id="dateDateOfOrder" layoutX="556.0" layoutY="212.0" prefHeight="28.0" prefWidth="200.0" promptText="Date of Order" styleClass="date_picker" stylesheets="@style/orders.css" />
+      <JFXDatePicker fx:id="dateDateOfDelivery" layoutX="808.0" layoutY="212.0" prefHeight="28.0" prefWidth="200.0" promptText="Date of Delivery" styleClass="date_picker" stylesheets="@style/orders.css" />
+      <Pane layoutX="248.0" layoutY="266.0" prefHeight="434.0" prefWidth="820.0" style="-fx-background-color: #eeeeee;">
+         <children>
+            <JFXComboBox fx:id="cmbItemId" layoutX="58.0" layoutY="16.0" prefHeight="31.0" prefWidth="150.0" promptText="Item ID" styleClass="combobox_2" stylesheets="@style/orders.css" />
+            <JFXTextField fx:id="txtDescription" layoutX="261.0" layoutY="16.0" prefHeight="31.0" prefWidth="300.0" promptText="Description" styleClass="textbox_2" stylesheets="@style/orders.css">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtPrice" layoutX="610.0" layoutY="16.0" prefHeight="31.0" prefWidth="150.0" promptText="Price" styleClass="textbox_2" stylesheets="@style/orders.css">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnAdd" defaultButton="true" layoutX="322.0" layoutY="72.0" onAction="#btnAdd_OnAction" prefHeight="31.0" prefWidth="84.0" styleClass="button_1" stylesheets="@style/orders.css" text="Add" />
+            <JFXButton fx:id="btnRemove" defaultButton="true" layoutX="444.0" layoutY="72.0" onAction="#btnRemove_OnAction" prefHeight="31.0" prefWidth="84.0" styleClass="button_1" stylesheets="@style/orders.css" text="Remove" />
+            <TableView fx:id="tblOrder" layoutX="61.0" layoutY="126.0" prefHeight="256.0" prefWidth="700.0" styleClass="table" stylesheets="@style/orders.css">
+               <columns>
+                  <TableColumn prefWidth="125.0" styleClass="table_column_center" text="Item ID" />
+                  <TableColumn prefWidth="300.0" text="Description" />
+                  <TableColumn prefWidth="125.0" styleClass="table_column_right" text="Weight" />
+                  <TableColumn prefWidth="150.0" styleClass="table_column_right" text="Price" />
+               </columns>
+            </TableView>
+            <Label layoutX="573.0" layoutY="393.0" text="Total:" textAlignment="RIGHT">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotal1" alignment="CENTER_RIGHT" layoutX="610.0" layoutY="393.0" prefWidth="150.0" text="lblTotal">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="306.0" layoutY="50.0" text="New Order">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="-3.0" layoutY="50.0" prefHeight="50.0" prefWidth="187.0" styleClass="title_left_label" stylesheets="@style/orders.css" text="Orders">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtBuyGold" alignment="CENTER_RIGHT" layoutX="1114.0" layoutY="160.0" prefHeight="31.0" prefWidth="200.0" promptText="Buy Gold" styleClass="textbox_2" stylesheets="@style/orders.css">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAdvance" alignment="CENTER_RIGHT" layoutX="1114.0" layoutY="212.0" prefHeight="31.0" prefWidth="200.0" promptText="Advance" styleClass="textbox_2" stylesheets="@style/orders.css">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="lblTotal2" alignment="CENTER_RIGHT" layoutX="1184.0" layoutY="118.0" prefWidth="130.0" text="lblTotal">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="1117.0" layoutY="118.0" text="Total:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNTotal" alignment="CENTER_RIGHT" layoutX="1184.0" layoutY="265.0" prefWidth="130.0" text="lblNTotal">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="1116.0" layoutY="265.0" text="Net Total:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBalance" alignment="CENTER_RIGHT" layoutX="1184.0" layoutY="309.0" prefWidth="130.0" text="lblBalance">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnPlaceOrder" layoutX="1114.0" layoutY="352.0" onAction="#btnPlaceOrder_OnAction" prefHeight="31.0" prefWidth="200.0" styleClass="button_2" stylesheets="@style/orders.css" text="Place Order" />
+      <Label layoutX="1116.0" layoutY="309.0" text="Balance:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

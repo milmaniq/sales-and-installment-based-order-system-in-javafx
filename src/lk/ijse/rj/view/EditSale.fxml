@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" minHeight="635.0" prefHeight="670.0" prefWidth="1100.0" stylesheets="@style/orders.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.rj.controller.EditSaleController">
+   <children>
+      <Label layoutX="47.0" layoutY="14.0" text="Edit Sale">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSalesId" layoutX="48.0" layoutY="74.0" promptText="Sales ID" styleClass="textbox" stylesheets="@style/orders.css">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmbEmployeeId" layoutX="296.0" layoutY="74.0" prefHeight="31.0" prefWidth="200.0" promptText="Employee ID" styleClass="combobox" stylesheets="@style/orders.css" />
+      <JFXComboBox fx:id="cmbOrderId" layoutX="546.0" layoutY="75.0" prefHeight="31.0" prefWidth="200.0" promptText="Order ID" styleClass="combobox" stylesheets="@style/orders.css" />
+      <JFXTextField fx:id="txtName" layoutX="47.0" layoutY="128.0" prefHeight="31.0" promptText="Name" styleClass="textbox" stylesheets="@style/orders.css">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContact" layoutX="298.0" layoutY="129.0" promptText="Contact" styleClass="textbox" stylesheets="@style/orders.css">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXDatePicker fx:id="dateDateOfSales" layoutX="546.0" layoutY="130.0" prefHeight="28.0" prefWidth="200.0" promptText="Date of Sale" styleClass="date_picker" stylesheets="@style/orders.css" />
+      <JFXTextField fx:id="txtAddress" layoutX="46.0" layoutY="182.0" prefHeight="31.0" prefWidth="700.0" promptText="Address" styleClass="textbox_2" stylesheets="@style/orders.css">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXTextField>
+      <FontAwesomeIcon fx:id="btnClose" fill="#ff3333" iconName="CLOSE" layoutX="1051.0" layoutY="45.0" onMouseClicked="#btnClose_OnMouseClicked" size="3em" />
+      <Label fx:id="lblTotal2" alignment="CENTER_RIGHT" layoutX="927.0" layoutY="94.0" prefWidth="130.0" text="lblTotal">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOBalance" alignment="CENTER_RIGHT" layoutX="927.0" layoutY="139.0" prefWidth="130.0" text="lblOBal">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtBuyGold" alignment="CENTER_RIGHT" layoutX="855.0" layoutY="181.0" prefHeight="31.0" prefWidth="200.0" promptText="Buy Gold" styleClass="textbox_2" stylesheets="@style/orders.css">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="lblNTotal" alignment="CENTER_RIGHT" layoutX="927.0" layoutY="234.0" prefWidth="130.0" text="lblNTotal">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="855.0" layoutY="94.0" text="Total:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="855.0" layoutY="139.0" text="O/B Bal:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="856.0" layoutY="234.0" text="Net Total:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnUpdateSales" layoutX="855.0" layoutY="367.0" onAction="#btnUpdateSales_OnAction" prefHeight="31.0" prefWidth="200.0" styleClass="button_2" stylesheets="@style/orders.css" text="Update Sales" />
+      <Pane layoutY="236.0" prefHeight="434.0" prefWidth="808.0" style="-fx-background-color: #eeeeee;">
+         <children>
+            <JFXTextField fx:id="txtDescription" layoutX="254.0" layoutY="16.0" prefHeight="31.0" prefWidth="300.0" promptText="Description" styleClass="textbox_2" stylesheets="@style/orders.css">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtPrice" layoutX="603.0" layoutY="16.0" prefHeight="31.0" prefWidth="150.0" promptText="Price" styleClass="textbox_2" stylesheets="@style/orders.css">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnSave" defaultButton="true" layoutX="364.0" layoutY="72.0" onAction="#btnSave_OnAction" prefHeight="31.0" prefWidth="84.0" styleClass="button_1" stylesheets="@style/orders.css" text="Save" />
+            <TableView fx:id="tblSale" layoutX="54.0" layoutY="126.0" prefHeight="256.0" prefWidth="700.0" styleClass="table" stylesheets="@style/orders.css">
+               <columns>
+                  <TableColumn prefWidth="125.0" styleClass="table_column_center" text="Item ID" />
+                  <TableColumn prefWidth="300.0" text="Description" />
+                  <TableColumn prefWidth="125.0" styleClass="table_column_right" text="Weight" />
+                  <TableColumn prefWidth="150.0" styleClass="table_column_right" text="Price" />
+               </columns>
+            </TableView>
+            <Label layoutX="566.0" layoutY="393.0" text="Total:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotal1" alignment="CENTER_RIGHT" layoutX="624.0" layoutY="393.0" prefWidth="130.0" text="lblTotal">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtItemId" layoutX="51.0" layoutY="16.0" prefHeight="31.0" prefWidth="150.0" promptText="Item Id" styleClass="textbox_2" stylesheets="@style/orders.css">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <JFXRadioButton fx:id="rbCancelled" layoutX="856.0" layoutY="278.0" style="-jfx-selected-color: #ff3333;" text="Cancelled">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXDatePicker fx:id="dateDateOfCancellation" layoutX="857.0" layoutY="311.0" prefHeight="28.0" prefWidth="200.0" promptText="Date of Cancellation" styleClass="date_picker" stylesheets="@style/orders.css" />
+   </children>
+</AnchorPane>

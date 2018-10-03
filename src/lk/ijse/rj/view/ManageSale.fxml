@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="700.0" prefWidth="1360.0" styleClass="mainFxmlClass" stylesheets="@style/orders.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.rj.controller.ManageSaleController">
+   <children>
+      <Label layoutX="-3.0" layoutY="50.0" prefHeight="50.0" prefWidth="187.0" styleClass="title_left_label" stylesheets="@style/orders.css" text="Sales">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="313.0" layoutY="50.0" text="Manage Sales">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSaleNewSales" layoutY="100.0" onMouseClicked="#label_OnMouseClicked" prefHeight="50.0" prefWidth="178.0" styleClass="left_label" stylesheets="@style/orders.css" text="New Sales">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon iconName="FILE_TEXT" strokeWidth="10.0" wrappingWidth="25.0" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblSaleManageSales" layoutY="150.0" onMouseClicked="#label_OnMouseClicked" prefHeight="50.0" prefWidth="178.0" styleClass="active_left_label" stylesheets="@style/orders.css" text="Manage Sales">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon iconName="PASTE" strokeWidth="10.0" styleClass="active_left_label" wrappingWidth="25.0" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblHome" onMouseClicked="#label_OnMouseClicked" prefHeight="50.0" prefWidth="187.0" styleClass="left_label" stylesheets="@style/orders.css" text="Home">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon iconName="HOME" strokeWidth="10.0" wrappingWidth="25.0" />
+         </graphic>
+      </Label>
+      <Separator layoutX="247.0" orientation="VERTICAL" prefHeight="700.0" prefWidth="2.0" />
+      <JFXComboBox fx:id="cmbSearchBy" layoutX="313.0" layoutY="110.0" prefHeight="31.0" prefWidth="200.0" promptText="Search By" styleClass="combobox" stylesheets="@style/orders.css" />
+      <JFXTextField fx:id="txtKeyword" layoutX="562.0" layoutY="111.0" prefHeight="31.0" promptText="Keyword" styleClass="textbox" stylesheets="@style/orders.css">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="tblSales" layoutX="312.0" layoutY="174.0" prefHeight="430.0" prefWidth="991.0" styleClass="table" stylesheets="@style/orders.css">
+        <columns>
+          <TableColumn prefWidth="101.99996948242188" styleClass="table_column_center" text="Sales ID" />
+          <TableColumn prefWidth="153.0" text="Name" />
+            <TableColumn prefWidth="161.0" styleClass="table_column_right" text="Contact Number" />
+            <TableColumn prefWidth="156.0" styleClass="table_column_right" text="Date of Sales" />
+            <TableColumn prefWidth="125.0" styleClass="table_column_right" text="Total" />
+            <TableColumn prefWidth="147.0" styleClass="table_column_right" text="Order ID" />
+            <TableColumn prefWidth="146.0" styleClass="table_column_right" text="Employee ID" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnEdit" layoutX="1203.0" layoutY="636.0" onAction="#btnEdit_OnAction" prefHeight="31.0" prefWidth="100.0" styleClass="button_2" stylesheets="@style/orders.css" text="Edit">
+         <graphic>
+            <FontAwesomeIcon iconName="EDIT" strokeWidth="10.0" wrappingWidth="25.0" />
+         </graphic></JFXButton>
+      <Label fx:id="lblSaleReports" layoutX="-3.0" layoutY="200.0" onMouseClicked="#label_OnMouseClicked" prefHeight="50.0" prefWidth="178.0" styleClass="left_label" stylesheets="@style/orders.css" text="Reports">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon iconName="COPY" strokeWidth="10.0" wrappingWidth="25.0" />
+         </graphic>
+      </Label>
+   </children>
+</AnchorPane>

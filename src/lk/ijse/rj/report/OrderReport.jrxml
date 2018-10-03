@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-29T13:18:14 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OrderReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e0448ff4-39b4-4836-9aeb-98d694bf7569">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="RJConnection"/>
+	<parameter name="monthName" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT rj.`order`.`dateOfOrder`,
+	monthname( dateOfOrder),
+	SUM( total)
+FROM rj.`order`
+WHERE 
+	 monthname(dateOfOrder) = $P{monthName} 
+GROUP BY rj.`order`.`dateOfOrder`]]>
+	</queryString>
+	<field name="dateOfOrder" class="java.sql.Date"/>
+	<field name="monthname( dateOfOrder)" class="java.lang.String"/>
+	<field name="SUM( total)" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<summary>
+		<band height="224">
+			<barChart>
+				<chart evaluationTime="Report">
+					<reportElement x="80" y="20" width="408" height="190" uuid="079e1e0b-47d7-4dbd-aaf6-450d8bf79c80"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{monthname( dateOfOrder)}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{dateOfOrder}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{SUM( total)}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</summary>
+</jasperReport>

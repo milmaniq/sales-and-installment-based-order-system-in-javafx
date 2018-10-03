@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="700.0" prefWidth="1360.0" styleClass="mainFxmlClass" stylesheets="@style/orders.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.rj.controller.ManageStockController">
+   <children>
+      <Label fx:id="lblStockManageStock" layoutY="100.0" onMouseClicked="#label_OnMouseClicked" prefHeight="50.0" prefWidth="178.0" styleClass="active_left_label" stylesheets="@style/orders.css" text="Manage Stock">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon iconName="FILE_TEXT" strokeWidth="10.0" styleClass="active_left_label" wrappingWidth="25.0" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblHome" onMouseClicked="#label_OnMouseClicked" prefHeight="50.0" prefWidth="187.0" styleClass="left_label" stylesheets="@style/orders.css" text="Home">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon iconName="HOME" strokeWidth="10.0" wrappingWidth="25.0" />
+         </graphic>
+      </Label>
+      <Separator layoutX="247.0" orientation="VERTICAL" prefHeight="700.0" prefWidth="2.0" />
+      <JFXTextField fx:id="txtItemId" layoutX="408.0" layoutY="100.0" promptText="Item Id" styleClass="textbox" stylesheets="@style/orders.css">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDescription" layoutX="656.0" layoutY="100.0" prefHeight="31.0" prefWidth="447.0" promptText="Description" styleClass="textbox_2" stylesheets="@style/orders.css">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtWeight" layoutX="406.0" layoutY="155.0" promptText="Weight" styleClass="textbox" stylesheets="@style/orders.css">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtRate" layoutX="656.0" layoutY="155.0" prefHeight="31.0" prefWidth="938.0" promptText="Rate" styleClass="textbox" stylesheets="@style/orders.css">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXTextField>
+      <JFXDatePicker fx:id="dateDateAdded" layoutX="906.0" layoutY="155.0" prefHeight="28.0" prefWidth="200.0" promptText="Date Added" styleClass="date_picker" stylesheets="@style/orders.css" />
+      <Label layoutX="306.0" layoutY="50.0" text="Add/Edit Stock">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="-3.0" layoutY="50.0" prefHeight="50.0" prefWidth="187.0" styleClass="title_left_label" stylesheets="@style/orders.css" text="Stock">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnSave" defaultButton="true" layoutX="576.0" layoutY="212.0" onAction="#btnSave_OnAction" prefHeight="31.0" prefWidth="84.0" styleClass="button_1" stylesheets="@style/orders.css" text="Save" />
+      <JFXButton fx:id="btnDelete" defaultButton="true" layoutX="716.0" layoutY="212.0" onAction="#btnDelete_OnAction" prefHeight="31.0" prefWidth="84.0" styleClass="button_1" stylesheets="@style/orders.css" text="Delete" />
+      <JFXButton fx:id="btnClear" defaultButton="true" layoutX="856.0" layoutY="212.0" onAction="#btnClear_OnAction" prefHeight="31.0" prefWidth="302.0" styleClass="button_1" stylesheets="@style/orders.css" text="Clear" />
+      <TableView fx:id="tblItems" layoutX="308.0" layoutY="282.0" prefHeight="380.0" prefWidth="938.0" styleClass="table" stylesheets="@style/orders.css">
+         <columns>
+            <TableColumn prefWidth="125.0" styleClass="table_column_center" text="Item ID" />
+            <TableColumn prefWidth="228.0" text="Description" />
+            <TableColumn prefWidth="213.0" styleClass="table_column_right" text="Weight" />
+            <TableColumn prefWidth="193.0" styleClass="table_column_right" text="Rate" />
+            <TableColumn prefWidth="178.0" styleClass="table_column_right" text="Date Added" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

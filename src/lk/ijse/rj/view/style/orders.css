@@ -1,0 +1,125 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-color: #fff;
+}
+
+.left_label{
+    -fx-background-color: #fff;
+    -fx-padding: 0 0 0 25;
+    -fx-text-fill: #000;
+    -fx-font-size: 18px;
+    /*-fx-font-weight: Regular;*/
+    font-weight: normal;
+    -fx-pref-width: 250px;
+    -fx-fill: #000;
+}
+
+.left_label:hover, .active_left_label:hover{
+    -fx-background-color: #DCDCDC;
+}
+
+.active_left_label{
+    -fx-background-color: #fff;
+    -fx-text-fill: #ff3333;
+    -fx-padding: 0 0 0 20;
+    -fx-font-size: 18px;
+    /*-fx-font-weight: Regular;*/
+    font-weight: normal;
+    -fx-pref-width: 250px;
+    -fx-border-color: transparent transparent transparent #ff3333;
+    -fx-border-width: 0 0 0 5;
+    -fx-fill: #ff3333;
+}
+
+.title_left_label{
+    -fx-background-color: #fff;
+    -fx-padding: 0 0 0 25;
+    -fx-text-fill: #000;
+    -fx-font-size: 15px;
+    /*-fx-font-weight: Regular;*/
+    font-weight: normal;
+    -fx-pref-width: 250px;
+    -fx-fill: #000;
+}
+.textbox{
+    -jfx-focus-color:#ff3333;
+    -jfx-label-float:true;
+    -fx-font-size: 15px;
+    -fx-pref-width: 200;
+}
+
+.textbox_2{
+    -jfx-focus-color:#ff3333;
+    -jfx-label-float:true;
+    -fx-font-size: 15px;
+}
+
+.combobox{
+    -jfx-focus-color:#ff3333;
+    -jfx-label-float: true;
+    -fx-font-size: 15px;
+    -fx-pref-width: 200;
+}
+
+.combobox_2{
+    -jfx-focus-color:#ff3333;
+    -jfx-label-float: true;
+    -fx-font-size: 15px;
+}
+
+.date_picker{
+    -jfx-default-color:#ff3333;
+    -fx-font-size: 15px;
+    -fx-pref-width: 200;
+}
+
+.button_1{
+    -fx-font-size: 15px;
+    -fx-pref-width: 80;
+    -fx-background-color: #ff3333;
+    -fx-text-fill: #fff;
+    -fx-font-weight: Bold;
+}
+
+.button:hover, .button:focused{
+    -fx-border-width: 1 1 1 1;
+    -fx-border-color: #fff;
+}
+
+.table{
+    -fx-font-size: 13px;
+}
+
+.table_column_center{
+    -fx-alignment: CENTER;
+}
+
+.table_column_right{
+    -fx-alignment: CENTER_RIGHT;
+}
+
+.button_2{
+    -fx-font-size: 15px;
+    -fx-background-color: #ff3333;
+    -fx-text-fill: #fff;
+    -fx-font-weight: Bold;
+    
+}
+
+.button_2 FontAwesomeIcon{
+    -fx-fill: #fff !important;
+    
+}
+
+.main_form_pane:hover{
+    -fx-border-color:#ff3333;
+    -fx-border-width: 2 2 2 2;
+    -fx-fill:#ff3333 !important;
+}
+
+.main_form_pane:hover FontAwesomeIcon{
+    -fx-fill:#ff3333 !important;
+}
